@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yussy15.github.io/posts/myblog%E4%BD%9C%E6%88%90/</loc>
+    <lastmod>2025-04-08T14:19:24+09:00</lastmod>
+  </url><url>
+    <loc>https://yussy15.github.io/posts/</loc>
+    <lastmod>2025-04-08T14:19:24+09:00</lastmod>
+  </url><url>
+    <loc>https://yussy15.github.io/</loc>
+    <lastmod>2025-04-08T14:19:24+09:00</lastmod>
+  </url><url>
     <loc>https://yussy15.github.io/pages/about/</loc>
   </url><url>
     <loc>https://yussy15.github.io/categories/</loc>
@@ -9,7 +18,5 @@
     <loc>https://yussy15.github.io/pages/</loc>
   </url><url>
     <loc>https://yussy15.github.io/tags/</loc>
-  </url><url>
-    <loc>https://yussy15.github.io/</loc>
   </url>
 </urlset>

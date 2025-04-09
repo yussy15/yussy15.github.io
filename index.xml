@@ -5,7 +5,63 @@
     <link>https://yussy15.github.io/</link>
     <description>Recent content on Yuto Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://yussy15.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 08 Apr 2025 14:19:24 +0900</lastBuildDate><atom:link href="https://yussy15.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Myblog作成</title>
+      <link>https://yussy15.github.io/posts/myblog%E4%BD%9C%E6%88%90/</link>
+      <pubDate>Tue, 08 Apr 2025 14:19:24 +0900</pubDate>
+      
+      <guid>https://yussy15.github.io/posts/myblog%E4%BD%9C%E6%88%90/</guid>
+      
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;今回はHugoを使用してブログを作成しました。&lt;br&gt;
+下記のリンクを参考にして個人的に追加で行ったことを書いていけたらと思います。
+&lt;a href=&#34;https://ikbase.net/blog/2024/03/03/hugo-congo/&#34;&gt;GitHubPagesとHugoCongoでブログを作成する手順&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;OS&lt;/th&gt;
+          &lt;th&gt;WIndows11&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hugo&lt;/td&gt;
+          &lt;td&gt;0.145&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Go&lt;/td&gt;
+          &lt;td&gt;1.24.1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;使用テーマ&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://themes.gohugo.io/themes/hugo-blog-awesome/&#34;&gt;hugo blog awsome&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;goのインストール&#34;&gt;Goのインストール&lt;/h2&gt;
+&lt;p&gt;自分の環境にGOが入っていなかったためGoのインストールをしました。&lt;br&gt;
+インストールは下記の記事を参考に手順に従って行いました。&lt;br&gt;
+&lt;a href=&#34;https://zenn.dev/atsushifx/articles/golang-win-install&#34;&gt;WindowsにGo言語をインストールする方法&lt;/a&gt;&lt;br&gt;
+GOPATHの設定は行わず、C:\langだけ作成し設定を行いました。&lt;/p&gt;
+&lt;h2 id=&#34;theme&#34;&gt;Theme&lt;/h2&gt;
+&lt;p&gt;今回はテーマにhugo blog awsomeを使用しました。 &lt;br&gt;
+&lt;a href=&#34;https://themes.gohugo.io/themes/hugo-blog-awesome/&#34;&gt;https://themes.gohugo.io/themes/hugo-blog-awesome/&lt;/a&gt;&lt;br&gt;
+Gitを使って管理したので「Using the theme as Git submodule」より下に従って作成していきます。&lt;br&gt;
+Configurationに関してはexampleSite内のhugo.tomlをコピーして自分に合うように編集します。&lt;/p&gt;
+&lt;h2 id=&#34;デプロイ&#34;&gt;デプロイ&lt;/h2&gt;
+&lt;p&gt;下記のリンクに従ってGitHub Pagesで公開しました。&lt;br&gt;
+&lt;a href=&#34;https://qiita.com/2Gken1029/items/c7eadefc45590cc55a5e&#34;&gt;ゼロからHugoでWebページをつくって，GitHub Pagesで公開するまで&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;終わりに&#34;&gt;終わりに&lt;/h2&gt;
+&lt;p&gt;Blogのようなものを書いてみたいと思っていたところでHugoで作成できる記事を見つけ挑戦してみました。&lt;br&gt;
+せっかくなのでこの挑戦した内容を初めての記事にできたらと思って書いてみました。&lt;br&gt;
+今後はGitHub PagesからNetlifyなど別のデプロイ先を試したいと考えています。&lt;br&gt;
+ここまでご覧いただきありがとうございました。&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>https://yussy15.github.io/pages/about/</link>
