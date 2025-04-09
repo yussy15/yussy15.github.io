@@ -22,11 +22,15 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th&gt;OS&lt;/th&gt;
-          &lt;th&gt;WIndows11&lt;/th&gt;
+          &lt;th&gt;項目&lt;/th&gt;
+          &lt;th&gt;詳細&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OS&lt;/td&gt;
+          &lt;td&gt;WIndows11&lt;/td&gt;
+      &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;Hugo&lt;/td&gt;
           &lt;td&gt;0.145&lt;/td&gt;
