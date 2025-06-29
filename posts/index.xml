@@ -6,7 +6,52 @@
     <description>Recent content in Posts on Yuto Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 08 Apr 2025 14:19:24 +0900</lastBuildDate><atom:link href="https://yussy15.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:34:03 +0900</lastBuildDate><atom:link href="https://yussy15.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitのあれこれ</title>
+      <link>https://yussy15.github.io/posts/git%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/</link>
+      <pubDate>Mon, 30 Jun 2025 00:34:03 +0900</pubDate>
+      
+      <guid>https://yussy15.github.io/posts/git%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/</guid>
+      
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;自分がGitで作業する際に困ったことがあったのでそれをまとめたいと思います。&lt;/p&gt;
+&lt;h2 id=&#34;sshを利用したgitclone&#34;&gt;SSHを利用したGitClone&lt;/h2&gt;
+&lt;p&gt;プライベートのリモートリポジトリをクローンするときにうまくいきませんでした。
+&lt;code&gt;https&lt;/code&gt;ではうまくいかなかったため&lt;code&gt;SSH&lt;/code&gt;で行うことにしました。&lt;/p&gt;
+&lt;h3 id=&#34;手順&#34;&gt;手順&lt;/h3&gt;
+&lt;h4 id=&#34;ステップ１sshキーを作成する&#34;&gt;ステップ１：SSHキーを作成する&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;ターミナルで下記のコマンドを実行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t ed25519 -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;実行後のプロンプトには以下のように答える。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter file in which to save the key &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/home/you/.ssh/id_ed25519&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: 【Enter】 Enter passphrase &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;empty &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; no passphrase&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: 【任意で入力 or そのままEnter】
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;→ &lt;code&gt;~/.ssh/id_ed25519&lt;/code&gt;（秘密鍵）と &lt;code&gt;~/.ssh/id_ed25519.pub&lt;/code&gt;（公開鍵）が生成される。&lt;/p&gt;
+&lt;h4 id=&#34;ステップ２githubにssh公開鍵を登録する&#34;&gt;ステップ２：GitHubにSSH公開鍵を登録する&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;公開鍵を表示しコピーする。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/.ssh/id_ed25519.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表示された内容を全てコピーする。（&lt;code&gt;ssh-ed25519 AAAAC3...&lt;/code&gt; で始まる長い文字列）
+2. GitHubで以下の手順：
+- ログイン
+- 右上アイコン → &lt;code&gt;Settings&lt;/code&gt;
+- 左メニュー「SSH and GPG keys」→「New SSH key」
+- 「Title」：わかりやすい名前（例：&lt;code&gt;MyLaptop&lt;/code&gt;）
+- 「Key」：さきほどコピーした公開鍵を貼り付ける
+- &lt;code&gt;Add SSH key&lt;/code&gt; をクリック&lt;/p&gt;
+&lt;h4 id=&#34;ステップ３sshでリポジトリをcloneする&#34;&gt;ステップ３：SSHでリポジトリをcloneする&lt;/h4&gt;
+&lt;p&gt;リポジトリページで「Code」ボタン → 「SSH」タブを選択し、表示されたURLを使う。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone git@github.com:username/repository.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;現在のフォルダをリモートリポジトリにあげる&#34;&gt;現在のフォルダをリモートリポジトリにあげる&lt;/h2&gt;
+&lt;p&gt;先にリモートリポジトリを作成しCloneしたフォルダを編集するのではなく、先に作成したフォルダをそのままリモートリポジトリにあげる方法です。
+今回はリモートリポジトリにあげるフォルダ名を&lt;code&gt;main_folder&lt;/code&gt;とします。&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Myblog作成</title>
       <link>https://yussy15.github.io/posts/makemyblog/</link>
